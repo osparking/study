@@ -5,6 +5,14 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>BumTiger Study Diary</name>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>5.3.25</version>
+		</dependency>
+	</dependencies>
 	<build>
 		<plugins>
 			<plugin>

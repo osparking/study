@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,18 +19,14 @@
 			<th>제목</th>
 			<th>시간(분)</th>
 		</tr>
-		<tr>
-			<td>1</td>
-			<td>2023-01-02</td>
-			<td><a href="#">깃 기본 명령</a></td>
-			<td>120</td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>2023-01-02</td>
-			<td><a href="#">깃 기본 명령</a></td>
-			<td>120</td>
-		</tr>
+		<c:forEach items="${diaries}" var="diary" varStatus="stat">
+			<tr>
+				<td>${fn:length(diaries) - stat.index}</td>
+				<td>${diary.studyDate}</td>
+				<td><a href="view?sno=${diary.sno}">${diary.title}</a></td>
+				<td>${diary.durationMin}</td>
+			</tr>
+		</c:forEach>
 	</table>
 </body>
 </html>

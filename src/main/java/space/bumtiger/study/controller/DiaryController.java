@@ -39,12 +39,7 @@ public class DiaryController {
 
 	@GetMapping("listing")
 	public String listing(Model model) {
-		var diaries = new ArrayList<Diary>();
-		Diary diary1 = new Diary(1, "깃 기본 명령", "", "2023-01-31", (short) 120);
-		Diary diary2 = new Diary(2, "깃 기본 명령", "", "2023-01-31", (short) 120);
-		diaries.add(diary1);
-		diaries.add(diary2);
-		model.addAttribute("diaries", diaries);
+		model.addAttribute("diaries", diaryService.listing());
 		return "listing";
 	}
 

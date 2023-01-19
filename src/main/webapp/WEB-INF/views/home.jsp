@@ -8,6 +8,6 @@
 </head>
 <body>
 	<a href="/study/diary/write">일기 작성</a>
-	<a href="">일기 목록</a>
+	<a href="diary/listing">일기 목록</a>
 </body>
 </html>

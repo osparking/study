@@ -7,18 +7,17 @@ public class DispatcherServletInitializerExt
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		// TODO Auto-generated method stub
-		return null;
+		return new Class[] { RootConfiguration.class };
 	}
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return new Class[] {WevMvcConfigImpl.class};
+		return new Class[] { WevMvcConfigImpl.class };
 	}
 
 	@Override
 	protected String[] getServletMappings() {
-		return new String[] {"/"};
+		return new String[] { "/" };
 	}
 
 }

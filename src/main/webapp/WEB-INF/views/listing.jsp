@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>학습 일기 목록</title>
+<link rel="stylesheet" href="/study/styles/style.css" />
 </head>
 <body>
 	<h2>학습 일기 목록</h2>

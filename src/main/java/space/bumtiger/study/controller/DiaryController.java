@@ -28,6 +28,11 @@ public class DiaryController {
 		return "redirect:listing";
 	}
 	
+	@GetMapping("listing")
+	public String listing() {
+		return "listing";
+	}
+
 	@GetMapping("write")
 	public String writeDiary() {
 		return "diary";

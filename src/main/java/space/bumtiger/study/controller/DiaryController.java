@@ -1,5 +1,7 @@
 package space.bumtiger.study.controller;
 
+import java.io.UnsupportedEncodingException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -20,6 +22,11 @@ public class DiaryController {
 
 	@PostMapping("save")
 	public String save(HttpServletRequest request, HttpServletResponse response) {
+		try {
+			request.setCharacterEncoding("UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
 		Diary diary = new Diary();
 		diary.setTitle(request.getParameter("title"));
 		diary.setContent(request.getParameter("content"));
@@ -27,7 +34,7 @@ public class DiaryController {
 		diaryService.save(diary);
 		return "redirect:listing";
 	}
-	
+
 	@GetMapping("listing")
 	public String listing() {
 		return "listing";

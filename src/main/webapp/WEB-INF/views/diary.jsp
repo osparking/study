@@ -15,8 +15,8 @@
 				<td style="text-align: right" colspan="2"><a href="/study">홈으로</a></td>
 			</tr>
 			<tr>
-				<td><label for="date">학습일</label></td>
-				<td><input type="date" id="date" name="date"></td>
+				<td><label for="studyDate">학습일</label></td>
+				<td><input type="date" id="studyDate" name="studyDate"></td>
 			</tr>
 			<tr>
 				<td><label for="title">제목</label></td>

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +24,7 @@
 			<tr>
 				<td>${fn:length(diaries) - stat.index}</td>
 				<td>${diary.studyDate}</td>
-				<td><a href="view?sno=${diary.sno}">${diary.title}</a></td>
+				<td><a href="read?sno=${diary.sno}">${diary.title}</a></td>
 				<td>${diary.durationMin}</td>
 			</tr>
 		</c:forEach>

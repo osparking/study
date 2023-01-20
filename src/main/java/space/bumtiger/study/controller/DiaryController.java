@@ -1,7 +1,6 @@
 package space.bumtiger.study.controller;
 
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -41,6 +40,14 @@ public class DiaryController {
 	public String listing(Model model) {
 		model.addAttribute("diaries", diaryService.listing());
 		return "listing";
+	}
+
+	@GetMapping("read")
+	public String readDiary(Model model) {
+		Diary diary = new Diary(15, "자바 람다식",
+				"람다식이 필요한 경우, 함수적 인터페이스, 함수적 메소드 등을 학습하였다", "2023-01-16", (short) 60);
+		model.addAttribute("diary", diary);
+		return "diary";
 	}
 
 	@GetMapping("write")

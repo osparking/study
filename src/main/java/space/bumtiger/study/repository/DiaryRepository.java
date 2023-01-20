@@ -8,4 +8,6 @@ public interface DiaryRepository {
 	int save(Diary diary);
 
 	List<Diary> listing();
+
+	Diary readDiary(String sno);
 }

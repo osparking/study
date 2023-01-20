@@ -44,4 +44,12 @@ public class DiaryRepositoryImpl implements DiaryRepository {
 					rs.getShort("duration_min"));
 		}
 	}
+
+	@Override
+	public Diary readDiary(String sno) {
+		String stmt = "select * from diary where sno = :sno";
+		Map<String, String> params = new HashMap<>();
+		params.put("sno", sno);
+		return jdbcTemplate.queryForObject(stmt, params, new DiaryMapper());
+	}
 }

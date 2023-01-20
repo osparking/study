@@ -34,7 +34,14 @@
 			</tr>
 			<tr>
 				<td></td>
-				<td class="submit"><input type="submit" value="저장"></td>
+				<td class="submit"><c:choose>
+						<c:when test="${diary == null}">
+							<input type="submit" value="저장">
+						</c:when>
+						<c:otherwise>
+							<a href="listing">목록으로</a>
+						</c:otherwise>
+					</c:choose></td>
 			</tr>
 		</table>
 	</form>

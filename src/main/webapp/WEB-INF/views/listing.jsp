@@ -11,6 +11,7 @@
 </head>
 <body>
 	<h2>학습 일기 목록</h2>
+	<h4>(학습일 역순)</h4>
 	<a href="/study">홈으로</a>
 	<table>
 		<tr>

@@ -18,19 +18,19 @@
 			<tr>
 				<td><label for="studyDate">학습일</label></td>
 				<td><input type="date" id="studyDate" name="studyDate"
-					<c:if test="${diary != null}"> readonly</c:if>></td>
+					<c:if test="${diary != null}"> readonly value="${diary.studyDate}"</c:if>></td>
 			</tr>
 			<tr>
 				<td><label for="title">제목</label></td>
 				<td><input type="text" id="title" name="title"
 					placeholder="(50자 이내)" maxlength="50"
-					<c:if test="${diary != null}"> readonly</c:if>></td>
+					<c:if test="${diary != null}"> readonly value="${diary.title}"</c:if>></td>
 			</tr>
 			<tr>
 				<td><label for="content">내용</label></td>
 				<td><textarea id="content" name="content" rows="5" cols="50"
 						placeholder="(상세한 학습 내용 - 2,000자 이내)" maxlength="2000"
-						<c:if test="${diary != null}"> readonly</c:if>></textarea></td>
+						<c:if test="${diary != null}"> readonly</c:if>>${diary.content}</textarea></td>
 			</tr>
 			<tr>
 				<td></td>

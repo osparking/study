@@ -6,3 +6,5 @@ insert into study.diary(title, content, study_date) values (
 
 use study;
 select * from diary order by study_date desc;
+
+select * from diary where sno = 8;

@@ -1,6 +1,7 @@
 package space.bumtiger.study.repository.impl;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,4 +27,12 @@ public class DiaryRepositoryImpl implements DiaryRepository {
 		return jdbcTemplate.update(sql, params);
 	}
 
+	@Override
+	public List<Diary> listing() {
+		String stmt = "select * from diary order by study_date desc";
+		return jdbcTemplate.query(stmt,
+				(rs, rN) -> new Diary(rs.getInt("sno"), rs.getString("title"),
+						rs.getString("content"), rs.getString("study_date"),
+						rs.getShort("duration_min")));
+	}
 }

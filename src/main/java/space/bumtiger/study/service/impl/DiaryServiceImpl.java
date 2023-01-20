@@ -25,4 +25,9 @@ public class DiaryServiceImpl implements DiaryService {
 		return diaryRepository.listing();
 	}
 
+	@Override
+	public Diary readDiary(String sno) {
+		return diaryRepository.readDiary(sno);
+	}
+
 }

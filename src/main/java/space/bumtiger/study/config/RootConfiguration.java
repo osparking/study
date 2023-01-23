@@ -21,7 +21,7 @@ public class RootConfiguration {
 		ds.setDriverClassName(org.mariadb.jdbc.Driver.class.getName());
 		ds.setUrl("jdbc:mariadb://localhost:3306/study");
 		ds.setUsername("myself");
-		ds.setPassword("1234");
+		ds.setPassword("`2m_^g]PB->m");
 		return ds;		
 	}
 }
